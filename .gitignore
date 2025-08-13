@@ -1,0 +1,7 @@
+# Ignore the original loyalty.js file
+js/loyalty og.js
+
+# Common files to ignore
+.DS_Store
+node_modules/
+*.log

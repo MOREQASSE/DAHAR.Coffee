@@ -109,7 +109,7 @@
     }
   
     // --- Staff PIN Logic ---
-    const hashedStaffCode = 'a22acb3cf89cc09a66eb43b9d50a02a28b261b6a249ca338f3e0b4c9d4a65973';
+    const _0x39a741=_0x2fc2;(function(_0x3bc52b,_0x860177){const _0xb7544c=_0x2fc2,_0x2a96df=_0x3bc52b();while(!![]){try{const _0x2a9bae=parseInt(_0xb7544c(0xe6))/0x1+-parseInt(_0xb7544c(0xef))/0x2*(-parseInt(_0xb7544c(0xed))/0x3)+-parseInt(_0xb7544c(0xe9))/0x4+parseInt(_0xb7544c(0xe7))/0x5+-parseInt(_0xb7544c(0xee))/0x6+-parseInt(_0xb7544c(0xec))/0x7+-parseInt(_0xb7544c(0xeb))/0x8*(-parseInt(_0xb7544c(0xe8))/0x9);if(_0x2a9bae===_0x860177)break;else _0x2a96df['push'](_0x2a96df['shift']());}catch(_0x3d6117){_0x2a96df['push'](_0x2a96df['shift']());}}}(_0x49d0,0x56f89));function _0x2fc2(_0x4b8f87,_0x481fd3){const _0x49d05d=_0x49d0();return _0x2fc2=function(_0x2fc20d,_0x3a47b1){_0x2fc20d=_0x2fc20d-0xe6;let _0x3c5962=_0x49d05d[_0x2fc20d];return _0x3c5962;},_0x2fc2(_0x4b8f87,_0x481fd3);}function _0x49d0(){const _0x576e40=['724675LxpsiQ','1071YpcMIZ','2318064KNNpPr','a22acb3cf89cc09a66eb43b9d50a02a28b261b6a249ca338f3e0b4c9d4a65973','42104AKolyI','3389785YpsDkq','13215paYFQk','770178dzsixD','140wBHmQf','468785rlUkkV'];_0x49d0=function(){return _0x576e40;};return _0x49d0();}const hashedStaffCode=_0x39a741(0xea);
     
     // DOM Elements
     const staffPin = document.getElementById('staff-pin');
@@ -127,7 +127,7 @@
       try {
         // Hash the input for comparison (case-sensitive)
         const msgBuffer = new TextEncoder().encode(input);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const _0x49de04=_0x52dc;(function(_0xfcb6b5,_0x48fadf){const _0x59eed9=_0x52dc,_0xef2393=_0xfcb6b5();while(!![]){try{const _0xf4418e=-parseInt(_0x59eed9(0x108))/0x1+parseInt(_0x59eed9(0x110))/0x2*(-parseInt(_0x59eed9(0x114))/0x3)+parseInt(_0x59eed9(0x10a))/0x4*(-parseInt(_0x59eed9(0x109))/0x5)+-parseInt(_0x59eed9(0x112))/0x6+parseInt(_0x59eed9(0x10d))/0x7+parseInt(_0x59eed9(0x111))/0x8*(parseInt(_0x59eed9(0x10f))/0x9)+parseInt(_0x59eed9(0x10e))/0xa;if(_0xf4418e===_0x48fadf)break;else _0xef2393['push'](_0xef2393['shift']());}catch(_0x1f7fe2){_0xef2393['push'](_0xef2393['shift']());}}}(_0x72e8,0x33b52));function _0x52dc(_0x338608,_0x292e06){const _0x72e8e8=_0x72e8();return _0x52dc=function(_0x52dc0c,_0x1514f1){_0x52dc0c=_0x52dc0c-0x108;let _0x4801fc=_0x72e8e8[_0x52dc0c];return _0x4801fc;},_0x52dc(_0x338608,_0x292e06);}function _0x72e8(){const _0x859f89=['1278114rRnMuL','SHA-256','30InrmYf','335768VByVzL','1174585MNjANS','4ZQROld','subtle','digest','1983877IaLboD','7627370XIiqOs','900yypVLB','13070zwMypI','1176gSeQVO'];_0x72e8=function(){return _0x859f89;};return _0x72e8();}const hashBuffer=await crypto[_0x49de04(0x10b)][_0x49de04(0x10c)](_0x49de04(0x113),msgBuffer);
         const hashArray = Array.from(new Uint8Array(hashBuffer));
         const hashedInput = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         
