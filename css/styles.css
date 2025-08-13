@@ -25,7 +25,12 @@
   a{color:var(--gold);text-decoration:none}
   a:hover{text-decoration:underline}
   
-  .container{width:min(1080px,92%);margin-inline:auto}
+  .container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 4%;
+  }
   .section{padding:56px 0}
   
   .display{
@@ -68,12 +73,48 @@
   .btn-outline{border-color:var(--gold); background:transparent}
   .btn-ghost{background:transparent; border-color:#2b3a66}
   
-  .site-header{
-    position:sticky; top:0; z-index:1000;
-    background:rgba(7,16,40,.8); backdrop-filter: blur(8px);
-    border-bottom:1px solid rgba(255,255,255,.05);
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(7,16,40,.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
   }
-  .nav-wrap{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+  
+  .nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 4%;
+    height: 100%;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    height: 52px; /* Match brand-mark height */
+  }
+  
+  .brand-mark {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    color: #0b1020;
+    font-weight: 800;
+  }
   
   .brand{display:flex; align-items:center; gap:10px; color:white; text-decoration:none}
   .brand:hover{text-decoration:none}
@@ -320,15 +361,57 @@
   }
   
   /* Menu page */
-  .menu-hero{padding:46px 0 10px; background:linear-gradient(180deg, rgba(212,175,55,.08), rgba(0,0,0,0))}
-  .menu-section-title{
-    font-family:'Playfair Display',serif; font-weight:600; margin:26px 0 10px 0;
-    color:#f2e6ba; border-left:4px solid var(--gold); padding-left:10px
+  .menu-hero {
+    padding: 46px 0 10px;
+    background: linear-gradient(180deg, rgba(212,175,55,.08), rgba(0,0,0,0));
+    text-align: center;
   }
-  .menu-grid{
-    display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px;
+  
+  .loyalty-banner {
+    margin: 20px 0 10px;
   }
-  .menu-card{
+  
+  .btn-loyalty {
+    background: linear-gradient(45deg, #D4AF37, #F5D36A);
+    color: #0b1020 !important;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    border: none;
+  }
+  
+  .btn-loyalty:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    color: #0b1020;
+  }
+  
+  .btn-loyalty i {
+    font-size: 1.2em;
+  }
+  
+  .menu-section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin: 26px 0 10px 0;
+    color: #f2e6ba;
+    border-left: 4px solid var(--gold);
+    padding-left: 10px;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  
+  .menu-card {
     border:1px solid rgba(255,255,255,.06);
     background:linear-gradient(180deg, #0c1835, #0a1530);
     border-radius:14px; overflow:hidden; box-shadow:var(--shadow);
