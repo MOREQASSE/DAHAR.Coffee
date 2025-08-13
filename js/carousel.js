@@ -6,30 +6,42 @@ document.addEventListener('DOMContentLoaded', function() {
   const prevButton = document.querySelector('.carousel-button.prev');
   const dotsNav = document.querySelector('.carousel-nav');
   
-  // Add more images to the carousel (you can add more as needed)
-  const carouselImages = [
-    'images/carousel item1.png',
-    'images/carousel item2.jpg', // Add more images here
-    'images/carousel item3.jpg',
-    'images/carousel item4.jpg'
-  ];
-  
-  // Create slides and navigation dots
+  // Initialize carousel with existing slides
   function initCarousel() {
-    // Clear existing slides except the first one
-    while (slides.length > 1) {
-      track.removeChild(slides[slides.length - 1]);
-      slides.pop();
-    }
+    // Create navigation dots based on existing slides
+    createDots();
     
-    // Add new slides
-    carouselImages.slice(1).forEach((image, index) => {
-      const slide = document.createElement('div');
-      slide.className = 'carousel-slide';
-      slide.innerHTML = `<img src="${image}" alt="Coffee shop gallery image ${index + 2}" loading="lazy">`;
-      track.appendChild(slide);
-      slides.push(slide);
-    });
+    // Clone first and last slides for infinite effect
+    const firstSlide = slides[0].cloneNode(true);
+    const lastSlide = slides[slides.length - 1].cloneNode(true);
+    
+    track.insertBefore(lastSlide, slides[0]);
+    track.appendChild(firstSlide);
+    
+    // Update slides array with cloned slides
+    slides.unshift(lastSlide);
+    slides.push(firstSlide);
+    
+    // Set initial position
+    track.style.transform = `translateX(-100%)`;
+    currentSlide = 1;
+    updateDots();
+  }
+  
+  // Create navigation dots
+  function createDots() {
+    dotsNav.innerHTML = '';
+    const slideCount = document.querySelectorAll('.carousel-slide').length;
+    
+    for (let i = 0; i < slideCount; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-indicator';
+      dot.setAttribute('data-slide', i);
+      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsNav.appendChild(dot);
+    }
     
     // Create navigation dots
     dotsNav.innerHTML = '';
