@@ -109,43 +109,70 @@
     }
   
     // --- Staff PIN Logic ---
-    let staffCode = 'Dahar4420';
-    const pinInput = document.getElementById('staff-pin');
+    const hashedStaffCode = 'a22acb3cf89cc09a66eb43b9d50a02a28b261b6a249ca338f3e0b4c9d4a65973';
+    
+    // DOM Elements
+    const staffPin = document.getElementById('staff-pin');
     const staffBtn = document.getElementById('staff-stamp-btn');
-  
-    function onPinInput(e) {
-      // Enable button only when PIN matches exactly (case-sensitive)
+    
+    async function onPinInput(e) {
       const input = e.target.value.trim();
-      staffBtn.disabled = input !== staffCode;
       
-      // Visual feedback
-      if (input && input !== staffCode) {
-        e.target.classList.add('error');
-      } else {
+      if (!input) {
+        staffBtn.disabled = true;
         e.target.classList.remove('error');
+        return;
+      }
+      
+      try {
+        // Hash the input for comparison (case-sensitive)
+        const msgBuffer = new TextEncoder().encode(input);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashedInput = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        
+        // Enable button only when hashed input matches the stored hash
+        const isMatch = hashedInput === hashedStaffCode;
+        staffBtn.disabled = !isMatch;
+        
+        // Visual feedback
+        e.target.classList.toggle('error', !isMatch && input.length > 0);
+      } catch (error) {
+        console.error('Error hashing PIN:', error);
+        staffBtn.disabled = true;
+        e.target.classList.add('error');
       }
     }
     
-    function onStaffBtnClick() {
-      // Double-check the PIN before adding a stamp
-      if (pinInput.value.trim() !== staffCode) {
-        showFeedback('Code incorrect. Veuillez réessayer.', true);
+    async function onStaffBtnClick() {
+      const input = staffPin.value.trim();
+      
+      if (!input) {
+        showFeedback('Veuillez entrer un code PIN', 'error');
         return;
       }
       
-      if (stamps.length >= MAX_STAMPS) {
-        showFeedback('La carte est déjà pleine. Veuillez la réinitialiser d\'abord.', true);
-        return;
+      try {
+        const msgBuffer = new TextEncoder().encode(input);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashedInput = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        
+        if (hashedInput === hashedStaffCode) {
+          if (stamps.length >= MAX_STAMPS) {
+            showFeedback('La carte est déjà pleine. Veuillez la réinitialiser d\'abord.', 'error');
+            return;
+          }
+          addStamp();
+          staffPin.value = ''; // Clear the input after successful stamp
+          staffBtn.disabled = true; // Disable the button after use
+        } else {
+          showFeedback('Code PIN incorrect', 'error');
+        }
+      } catch (error) {
+        console.error('Error verifying PIN:', error);
+        showFeedback('Erreur lors de la vérification du code PIN', 'error');
       }
-      
-      // Add the stamp
-      addStamp();
-      
-      // Clear the PIN input but don't disable it
-      pinInput.value = '';
-      staffBtn.disabled = true;
-      
-      // Don't show success message here - it will be shown by addStamp()
     }
   
     // --- Initialize ---
@@ -165,8 +192,8 @@
       }
       
       // Event listeners
-      if (pinInput && staffBtn) {
-        pinInput.addEventListener('input', onPinInput);
+      if (staffPin && staffBtn) {
+        staffPin.addEventListener('input', onPinInput);
         staffBtn.addEventListener('click', onStaffBtnClick);
       }
     }
