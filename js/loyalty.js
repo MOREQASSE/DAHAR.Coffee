@@ -44,7 +44,7 @@
     }
   
     // --- Staff PIN Logic ---
-    let staffCode = 'DaharMansix4420';  // Replace via build-time env var or CI secret
+    let staffCode = 'Dahar4420';  // Replace via build-time env var or CI secret
   
     const pinInput = document.getElementById('staff-pin');
     const staffBtn = document.getElementById('staff-stamp-btn');

@@ -7,8 +7,11 @@
   
   body {
     font-family: Arial, sans-serif;
-    padding: 2rem;
-    background: #f8f3ee;
+    padding: 2rem;   
+    background:
+    radial-gradient(1200px 600px at 10% -10%, #12254a 0%, transparent 60%),
+    radial-gradient(1200px 600px at 110% 10%, #0b1f3b 0%, transparent 60%),
+    linear-gradient(180deg, #0a1833 0%, #0a1630 100%);
     color: #333;
   }
   
@@ -38,13 +41,13 @@
   .stamp {
     width: 2rem;
     height: 2rem;
-    border: 2px solid #d3b38c;
+    border: 2px solid #D4AF37;
     border-radius: 50%;
     background: #fff;
     transition: background 0.3s;
   }
   .stamp.filled {
-    background: #d3b38c;
+    background: #D4AF37;
   }
   
   /* Staff area */
