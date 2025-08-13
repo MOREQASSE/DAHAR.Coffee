@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="images/placeholder.png" />
 </head>
 <body>
@@ -24,12 +25,12 @@
 
       <nav class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="#location">Localisation</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+          <li><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></li>
+          <li><a href="#location"><i class="fas fa-map-marker-alt"></i> Localisation</a></li>
+          <li><a href="#contact" class="btn btn-sm"><i class="fas fa-envelope"></i> Contact</a></li>
           <li><a class="btn btn-gold" href="tel:+212626338036">Appeler</a></li>
-          <li><a class="btn btn-outline" href="https://wa.me/212626338036" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a class="btn btn-green" href="https://wa.me/212626338036" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </nav>
     </div>
@@ -47,14 +48,34 @@
             <a href="#location" class="btn btn-ghost btn-lg">Nous Trouver</a>
           </div>
           <div class="quick-info">
-            <div><strong>Adresse :</strong> Bd Oued Loukkous, Casablanca</div>
-            <div><strong>Horaires :</strong> Lun–Ven 7h–22h · Sam 9h–22h · Dim 10h–22h</div>
-            <div><strong>Téléphone :</strong> <a href="tel:+212626338036">+212 6 26 33 80 36</a> · <strong>Email :</strong> <a href="mailto:contact@devaxio.com">contact@devaxio.com</a></div>
+            <div>
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <strong>Adresse :</strong> Hay Hassani avenue Oued Loukkous, Casablanca
+            </div>
+            <div>
+              <i class="far fa-clock" aria-hidden="true"></i>
+              <strong>Horaires :</strong> Lun-Ven 7h-22h | Sam 9h-22h | Dim 10h-22h
+            </div>
+            <div>
+              <i class="fas fa-phone-alt" aria-hidden="true"></i>
+              <strong>Téléphone :</strong>
+              <a href="tel:+212626338036">+212 6 26 33 80 36</a>
+            </div>
+            <div>
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <strong>Email :</strong>
+              <a href="mailto:contact@devaxio.com">contact@devaxio.com</a>
+            </div>
+            <div class="social-follow">
+              <a href="https://instagram.com/dahar_coffee" target="_blank" rel="noopener" class="btn-instagram">
+                <i class="fab fa-instagram"></i> Suivez-nous sur Instagram
+              </a>
+            </div>
           </div>
         </div>
         <div class="hero-art" aria-hidden="false">
           <img src="images/logo.webp" alt="Hero Art" aria-hidden="false">
-          <div class="hero-badge">Since • Today</div>
+          <div class="hero-badge">Good Coffee Good Mood</div>
         </div>
       </div>
       <div class="hero-gradient" aria-hidden="true"></div>
@@ -90,22 +111,22 @@
     <section class="section">
       <div class="container">
         <div class="card schedule">
-          <h2 class="h2">Horaires d'ouverture</h2>
+          <h2 class="h2"><i class="far fa-clock"></i> Horaires d'ouverture</h2>
           <div class="hours-grid">
             <div class="hours-row">
-              <span>Lundi – Vendredi</span>
-              <span>7h – 22h</span>
+              <span><i class="far fa-calendar"></i> Lundi – Vendredi</span>
+              <span><i class="far fa-sun"></i> 7h – <i class="far fa-moon"></i> 22h</span>
             </div>
             <div class="hours-row">
-              <span>Samedi</span>
-              <span>9h – 22h</span>
+              <span><i class="far fa-calendar"></i> Samedi</span>
+              <span><i class="far fa-sun"></i> 9h – <i class="far fa-moon"></i> 22h</span>
             </div>
             <div class="hours-row">
-              <span>Dimanche</span>
-              <span>10h – 22h</span>
+              <span><i class="far fa-calendar"></i> Dimanche</span>
+              <span><i class="far fa-sun"></i> 10h – <i class="far fa-moon"></i> 22h</span>
             </div>
           </div>
-          <p class="muted">Accès libre. Pour les réservations de groupe, contactez-nous sur WhatsApp.</p>
+          <p class="muted"><i class="fas fa-info-circle"></i> Accès libre. Pour les réservations de groupe, <a href="https://wa.me/212626338036" target="_blank" rel="noopener">contactez-nous sur WhatsApp <i class="fab fa-whatsapp"></i></a>.</p>
         </div>
       </div>
     </section>
@@ -115,12 +136,14 @@
       <div class="container">
         <div class="two-col">
           <div>
-            <h2 class="h2">Nous trouver</h2>
-            <p><strong>Adresse :</strong> Bd Oued Loukkous, Casablanca</p>
-            <p><strong>Coordonnées :</strong> 33.56084003839002, -7.680629594451239</p>
+            <h2 class="h2"><i class="fas fa-map-marked-alt"></i> Nous trouver</h2>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Adresse :</strong> Hay Hassani avenue Oued Loukkous, Casablanca</p>
+            <p><i class="fas fa-map-pin"></i> <strong>Coordonnées :</strong> 33.56084003839002, -7.680629594451239</p>
             <div class="btn-row">
               <a class="btn btn-outline" target="_blank" rel="noopener"
-                 href="https://www.google.com/maps/search/?api=1&query=33.56084003839002,-7.680629594451239">Ouvrir dans Google Maps</a>
+                href="https://www.google.com/maps/dir//33.56084003839002,-7.680629594451239">
+                <i class="fas fa-route"></i> Ouvrire le map
+              </a>
               <a class="btn btn-ghost" href="https://wa.me/212626338036" target="_blank" rel="noopener">Message sur WhatsApp</a>
             </div>
           </div>
@@ -135,12 +158,12 @@
     <section id="contact" class="section">
       <div class="container">
         <div class="card contact-card">
-          <h2 class="h2">Contact</h2>
-          <div class="contact-grid">
-            <div><strong>Téléphone :</strong> <a href="tel:+212626338036">+212 6 26 33 80 36</a></div>
-            <div><strong>WhatsApp :</strong> <a href="https://wa.me/212626338036" target="_blank" rel="noopener">Nous écrire</a></div>
-            <div><strong>Email :</strong> <a href="mailto:contact@devaxio.com">contact@devaxio.com</a></div>
-            <div><strong>Adresse :</strong> Bd Oued Loukkous, Casablanca</div>
+          <div class="contact-info">
+            <h3 class="h3"><i class="fas fa-envelope-open-text"></i> Contactez-nous</h3>
+            <div><i class="fas fa-phone"></i> <strong>Téléphone :</strong> <a href="tel:+212626338036">+212 6 26 33 80 36</a></div>
+            <div><i class="fab fa-whatsapp"></i> <strong>WhatsApp :</strong> <a href="https://wa.me/212626338036" target="_blank" rel="noopener">Nous écrire</a></div>
+            <div><i class="far fa-envelope"></i> <strong>Email :</strong> <a href="mailto:contact@devaxio.com">contact@devaxio.com</a></div>
+            <div><i class="fas fa-map-marker-alt"></i> <strong>Adresse :</strong> Hay Hassani avenue Oued Loukkous, Casablanca</div>
           </div>
         </div>
       </div>
@@ -157,18 +180,18 @@
   
       <!-- Colonne 2 : Liens rapides -->
       <div class="footer-links">
-        <h4>Liens rapides</h4>
+        <h4><i class="fas fa-link"></i> Liens rapides</h4>
         <ul>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#about"><i class="fas fa-chevron-right"></i> À propos</a></li>
+          <li><a href="#menu"><i class="fas fa-chevron-right"></i> Menu</a></li>
+          <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          <li><a href="#faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
         </ul>
       </div>
   
       <!-- Colonne 3 : Coordonnées -->
       <div class="footer-contact">
-        <h4>Contact</h4>
+        <h4><i class="fas fa-address-card"></i> Contact</h4>
         <p><i class="fas fa-map-marker-alt"></i> Avenue Hassan II, Essaouira, Maroc</p>
         <p><i class="fas fa-phone"></i> +212 6 12 34 56 78</p>
         <p><i class="fas fa-envelope"></i> contact@daharcoffee.ma</p>
@@ -176,11 +199,11 @@
   
       <!-- Colonne 4 : Newsletter -->
       <div class="footer-newsletter">
-        <h4>Newsletter</h4>
-        <p>Recevez nos dernières offres et nouveautés directement dans votre boîte mail.</p>
+        <h4><i class="fas fa-paper-plane"></i> Newsletter</h4>
+        <p><i class="fas fa-bell"></i> Recevez nos dernières offres et nouveautés directement dans votre boîte mail.</p>
         <form>
           <input type="email" placeholder="Votre e-mail" required>
-          <button type="submit">S'abonner</button>
+          <button type="submit"><i class="fas fa-paper-plane"></i> S'abonner</button>
         </form>
       </div>
     </div>
@@ -188,10 +211,12 @@
     <!-- Bas de footer -->
     <div class="footer-bottom">
       <p>© 2025 DAHAR COFFEE — Tous droits réservés</p>
+      <p>Project by Devaxio</p>
       <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
       </div>
     </div>
   </footer>
