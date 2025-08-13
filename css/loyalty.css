@@ -52,27 +52,88 @@
   
   /* Staff area */
   #staff-area {
-    margin-top: 1rem;
+    margin: 20px auto;
+    max-width: 400px;
   }
-  #staff-area input {
+  
+  #staff-pin {
     width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
   }
-  #staff-area button {
+  
+  #staff-pin:focus {
+    border-color: #D4AF37;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+  }
+  
+  #staff-pin.error {
+    border-color: #e74c3c;
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  #staff-stamp-btn {
     width: 100%;
-    padding: 0.5rem;
-    background: #8e5a26;
-    color: #fff;
+    padding: 12px 20px;
+    background: #D4AF37;
+    color: #0b1020;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
   }
-  #staff-area button:disabled {
-    background: #c8c2be;
+  
+  #staff-stamp-btn:disabled {
+    background: #e0e0e0;
+    color: #a0a0a0;
     cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  #staff-stamp-btn:not(:disabled):hover {
+    background: #e8c15a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Reset button */
+  #reset-stamps {
+    display: none;
+    margin: 15px auto 0;
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #reset-stamps:hover {
+    background: #c0392b;
+  }
+  
+  #reset-stamps i {
+    margin-right: 8px;
+  }
+  
+  /* Animation for error state */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
   }
   
   /* Status message */

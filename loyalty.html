@@ -38,19 +38,23 @@
     <h2 style="color: black;">Votre Carte de Fidélité</h2>
     <div id="stamps"></div>
 
-    <div id="staff-area">
-      <input
-        type="password"
-        id="staff-pin"
-        placeholder="Code employé"
-        autocomplete="off"
-      />
-      <button id="staff-stamp-btn" disabled>
-        Ajouter un tampon
-      </button>
+    <div class="loyalty-actions">
+      <div id="staff-area">
+        <input
+          type="password"
+          id="staff-pin"
+          placeholder="Code employé"
+          autocomplete="off"
+          class="form-input"
+        />
+        <button id="staff-stamp-btn" class="btn" disabled>
+          <i class="fas fa-stamp"></i> Ajouter un tampon
+        </button>
+      </div>
+      <!-- Reset button will be added here by JavaScript -->
     </div>
 
-    <p id="status-msg" style="color: black; font-weight: bold;"></p>
+    <p id="status-msg" style="color: black; font-weight: bold; min-height: 24px; margin: 10px 0;"></p>
   </section>
   <footer class="footer">
     <div class="footer-grid">
