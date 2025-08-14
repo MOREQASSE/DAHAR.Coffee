@@ -118,7 +118,7 @@
         "name": "Mojito fraise",
         "description": "Un délicieux mélange de fraises fraîches et de menthe",
         "price": 25,
-        "image": "../images/menu.jpg"
+        "image": "./images/menu.jpg"
       },
       {
         "name": "Mojito classique",
