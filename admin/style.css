@@ -116,6 +116,29 @@ header h1 {
   box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
 }
 
+/* Admin Panel Title */
+h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  margin: 30px 0;
+  font-size: 2.2rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 3px;
+}
+
 /* Menu List */
 .menu-list {
   margin-top: 20px;
