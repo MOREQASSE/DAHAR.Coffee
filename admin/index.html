@@ -5,8 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DAHAR COFFEE – Menu Admin</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+          <a class="brand" href="index.html">
+            <span class="brand-mark"><img src="../images/logo.webp" alt="Logo Dahar Coffee"></span>
+            <span class="brand-text">DAHAR COFFEE</span>
+          </a>
+    
+          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          </button>
+    
+          <nav class="site-nav" aria-label="Primary">
+            <ul>
+              <li><a href="../index.html"><i class="fas fa-home"></i> Accueil</a></li>
+              <li><a href="../menu.html"><i class="fas fa-utensils"></i> Menu</a></li>
+              <li><a href="../loyalty.html"><i class="fas fa-user"></i> Carte de Fidélité</a></li>
+              <li><a href="../index.html#contact" class="btn btn-sm"><i class="fas fa-envelope"></i> Contact</a></li>
+              <li><a class="btn btn-gold" href="tel:+212626338036">Appeler</a></li>
+              <li><a class="btn btn-green" href="https://wa.me/212626338036" target="_blank" rel="noopener">WhatsApp</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
   <div class="container">
     <h1>Menu Admin Panel</h1>
 
@@ -25,7 +51,58 @@
     <h2>Current Menu</h2>
     <div id="menuList" class="menu-list"></div>
   </div>
+  <footer class="footer">
+    <div class="footer-grid">
+      <!-- Colonne 1 : Logo & Description -->
+      <div class="footer-brand">
+        <img src="../images/logo.webp" alt="Logo Dahar Coffee" class="footer-logo">
+        <p>Chez DAHAR COFFEE, chaque tasse est un voyage sensoriel entre tradition et modernité.</p>
+      </div>
+  
+      <!-- Colonne 2 : Liens rapides -->
+      <div class="footer-links">
+        <h4><i class="fas fa-link"></i> Liens rapides</h4>
+        <ul>
+          <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+          <li><a href="../menu.html"><i class="fas fa-chevron-right"></i> Menu</a></li>
+          <li><a href="../loyalty.html"><i class="fas fa-chevron-right"></i> Carte de Fidélité</a></li>
+          <li><a href="../index.html#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Colonne 3 : Coordonnées -->
+      <div class="footer-contact">
+        <h4><i class="fas fa-address-card"></i> Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Avenue Hassan II, Essaouira, Maroc</p>
+        <p><i class="fas fa-phone"></i> +212 6 12 34 56 78</p>
+        <p><i class="fas fa-envelope"></i> contact@daharcoffee.ma</p>
+      </div>
+  
+      <!-- Colonne 4 : Newsletter -->
+      <div class="footer-newsletter">
+        <h4><i class="fas fa-paper-plane"></i> Newsletter</h4>
+        <p><i class="fas fa-bell"></i> Recevez nos dernières offres et nouveautés directement dans votre boîte mail.</p>
+        <form>
+          <input type="email" placeholder="Votre e-mail" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i> S'abonner</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Bas de footer -->
+    <div class="footer-bottom">
+      <p>© 2025 DAHAR COFFEE — Tous droits réservés</p>
+      <p>Project by <a href="https://devaxio.com" target="_blank" rel="noopener">Devaxio</a></p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
