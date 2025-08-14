@@ -8,7 +8,7 @@
         "name": "Nespresso",
         "description": "Un café court et intense pour les amateurs de saveurs corsées",
         "price": 7,
-        "image": "/DAHAR.Coffee/images/menu.jpg"
+        "image": "./images/menu.jpg"
       },
       {
         "name": "Café au lait",
