@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DAHAR COFFEE – Menu Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Menu Admin Panel</h1>
+
+    <form id="menuForm">
+      <input type="text" name="name" placeholder="Item Name" required />
+      <textarea name="description" placeholder="Description" required></textarea>
+      <input type="number" name="price" placeholder="Price (MAD)" required />
+      <input type="file" name="image" accept="image/*" required />
+      <button type="submit">Upload Item</button>
+    </form>
+
+    <div id="status"></div>
+
+    <hr />
+
+    <h2>Current Menu</h2>
+    <div id="menuList" class="menu-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
