@@ -8,43 +8,43 @@
         "name": "Nespresso",
         "description": "Un café court et intense pour les amateurs de saveurs corsées",
         "price": 7,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Café au lait",
         "description": "Mélange équilibré de café et de lait chaud",
         "price": 8,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Café américain",
         "description": "Un café allongé et doux pour une pause détente",
         "price": 8,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Cappuccino",
         "description": "Espresso, lait chaud et une belle mousse de lait onctueuse",
         "price": 10,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Café moka",
         "description": "Un délicieux mélange de café et de chocolat chaud",
         "price": 10,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Chocolat chaud",
         "description": "Chocolat crémeux et réconfortant, surmonté de crème fouettée",
         "price": 11,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Spécial DAHAR",
         "description": "Notre création signature, un mélange unique de saveurs",
         "price": 12,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       }
     ]
   },
@@ -57,55 +57,55 @@
         "name": "Fraise milkshake",
         "description": "Un délicieux milkshake à la fraise fraîche",
         "price": 20,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Vanille milkshake",
         "description": "Un classique indémodable à la vanille de Madagascar",
         "price": 20,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Caramel milkshake",
         "description": "Une douceur caramélisée à déguster sans modération",
         "price": 20,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Chocolat milkshake",
         "description": "Chocolat intense et crème onctueuse",
         "price": 20,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Cerelac milkshake",
         "description": "Une touche d'enfance revisitée en version gourmande",
         "price": 20,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Oreo milkshake",
         "description": "Le célèbre biscuit mixé dans un milkshake onctueux",
         "price": 20,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Henrys milkshake",
         "description": "Un délice chocolaté aux pépites de cookies",
         "price": 20,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Kit kat milkshake",
         "description": "Le célèbre biscuit croquant dans un milkshake gourmand",
         "price": 22,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Mats milkshake",
         "description": "Notre spécialité maison à la touche unique",
         "price": 22,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       }
     ]
   },
@@ -124,13 +124,13 @@
         "name": "Mojito classique",
         "description": "La recette traditionnelle du mojito cubain",
         "price": 25,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Mojito tropical",
         "description": "Un mélange exotique de fruits de la passion et de mangue",
         "price": 25,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       }
     ]
   },
@@ -143,19 +143,19 @@
         "name": "Chocolat frappé",
         "description": "Un délicieux mélange glacé au chocolat",
         "price": 18,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Vanille frappé",
         "description": "Un classique rafraîchissant à la vanille",
         "price": 18,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Caramel frappé",
         "description": "Une douceur caramélisée glacée",
         "price": 18,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       }
     ]
   },
@@ -168,19 +168,19 @@
         "name": "Crêpe Nutella",
         "description": "Une crêpe généreusement garnie de Nutella",
         "price": 15,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Crêpe miel",
         "description": "Une crêpe légèrement sucrée au miel d'acacia",
         "price": 12,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Crêpe confiture",
         "description": "Au choix : fraise, abricot ou orange",
         "price": 10,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       }
     ]
   },
@@ -193,25 +193,25 @@
         "name": "Brownies",
         "description": "Moelleux et fondant, au cœur coulant de chocolat",
         "price": 12,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Muffin chocolat",
         "description": "Un muffin moelleux aux pépites de chocolat",
         "price": 10,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Croissant",
         "description": "Un croissant pur beurre, léger et croustillant",
         "price": 8,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       },
       {
         "name": "Pain au chocolat",
         "description": "Un classique de la pâtisserie française",
         "price": 8,
-        "image": "/images/menu.jpg"
+        "image": "/..images/menu.jpg"
       }
     ]
   }
