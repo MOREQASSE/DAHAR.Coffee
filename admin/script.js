@@ -354,7 +354,6 @@ function getSectionIcon(sectionName) {
   
   return icons[sectionName] || 'fas fa-utensils';
 }
-}
 
 // Display menu items in the admin panel
 function displayMenu(menuData) {
@@ -421,12 +420,6 @@ function displayMenu(menuData) {
       }
 
       const itemElement = document.createElement('div');
-      // Get the current protocol and host
-      const baseUrl = window.location.origin;
-      // Convert relative path to absolute URL
-      const imgPath = item.image.startsWith('./') ? item.image.substring(1) : item.image;
-      const imgSrc = `${baseUrl}${imgPath}`;
-      
       itemElement.className = 'menu-item';
       
       // Convert relative path to absolute URL
@@ -436,11 +429,7 @@ function displayMenu(menuData) {
       
       itemElement.innerHTML = `
         <div class="item-image">
-<<<<<<< HEAD
-          <img src="${imgSrc}" alt="${item.name}" class="menu-img" onerror="console.error('Failed to load image:', this.src); this.style.display='none'" />
-=======
           <img src="${imgSrc}" alt="${item.name}" class="menu-img" onerror="this.style.display='none'" />
->>>>>>> cc0c9ea (garbage)
         </div>
         <div class="item-details">
           <h3 class="item-name">${item.name}</h3>
